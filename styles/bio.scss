@@ -1,0 +1,11 @@
+// start with mobile display first (no media query for mobile)
+// take look at tablet & add styles what you need - add media query (768px breakpoint)
+// look at desktop, do styles (1280px breakpoint)
+// go back & see what the in between is
+// if there's any weird breakpoints
+
+@import './variables';
+@import './mixins';
+@import './fonts';
+@import './partials/site-header';
+@import './partials/site-footer';
