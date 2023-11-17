@@ -1,8 +1,11 @@
 .nav {
-    position: relative;
-
+    background-color: $bandsite-black;
     &__logo {
-
+        font-family: "Avenir Next Bold";
+        color: $white;
+        font-size: 10px;
+        line-height: 20px;
+        font-weight: bold;
     }
 
     &__links {
@@ -18,8 +21,23 @@
 }
 
 .hero {
-    position: absolute;
-    &__title {
+    background-image: url("/assets/images/hero-bio.jpg");
+    width: 100%;
+    height: 33rem; //change this after media queries are set
+    margin: 0;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba($bandsite-black, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    color: $white;
 
+    &__title {
+        font-family: 'Avenir Next Bold';
+        font-size: 24px;
+        line-height: 32px;
+        padding: 16px;
     }
 }
