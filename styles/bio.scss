@@ -4,8 +4,9 @@
 // go back & see what the in between is
 // if there's any weird breakpoints
 
-@import './variables';
-@import './mixins';
-@import './fonts';
+@import './partials/variables';
+@import './partials/mixins';
+@import './partials/fonts';
 @import './partials/site-header';
 @import './partials/site-footer';
+@import './partials/general';
