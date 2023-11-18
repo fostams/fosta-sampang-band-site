@@ -1,16 +1,16 @@
 @font-face {
   font-family: "Avenir";
-  src: url("../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype-font"), url("../assets/fonts/alternative-files/AvenirNextLTPro.ttf") format("truetype-font");
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf"), url("../assets/fonts/alternative-files/AvenirNextLTPro.ttf");
   font-weight: 400;
 }
 @font-face {
   font-family: "Avenir";
-  src: url("../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype-font"), url("../assets/fonts/alternative-files/AvenirNextLTProDemi.ttf") format("truetype-font");
+  src: url("../assets/fonts/AvenirNextLTPro-Demi.otf"), url("../assets/fonts/alternative-files/AvenirNextLTProDemi.ttf");
   font-weight: 600;
 }
 @font-face {
   font-family: "Avenir";
-  src: url("../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype-font"), url("../assets/fonts/alternative-files/AvenirNextLTProBold.ttf") format("truetype-font");
+  src: url("../assets/fonts/AvenirNextLTPro-Bold.otf"), url("../assets/fonts/alternative-files/AvenirNextLTProBold.ttf");
   font-weight: 700;
 }
 .nav {
@@ -96,4 +96,9 @@
   margin-right: 0;
   padding-left: 16px;
   padding-right: 16px;
+}
+
+body {
+  font-family: "Avenir";
+  font-weight: 700;
 }/*# sourceMappingURL=bio.css.map */

@@ -1,3 +1,5 @@
+@use './fonts';
+
 * {
     box-sizing: border-box;
     margin-left: 0;
@@ -13,4 +15,9 @@
     margin-right: 0;
     padding-left: 16px;
     padding-right: 16px;
+}
+
+body { // test, change later
+    font-family: "Avenir";
+    font-weight: 700;
 }
