@@ -86,15 +86,13 @@
 }
 
 .about {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 20px 0 20px;
 }
 .about__title {
   font-size: 33px;
   font-weight: 600;
   color: #323232;
-  padding-top: 28px;
-  padding-bottom: 12px;
+  padding: 28px 0 12px 0;
 }
 .about__photo-container {
   overflow: hidden;
@@ -145,11 +143,23 @@
   background-color: #FAFAFA;
   display: flex;
   flex-flow: column wrap;
+  padding: 0 20px 0 20px;
+}
+.photo__title {
+  font-size: 33px;
+  font-weight: 600;
+  color: #323232;
+  padding: 28px 0 12px 0;
 }
 .photo__image {
   width: 100%;
   height: auto;
-  padding: 10px 20px;
+  padding: 0 0 20px 0;
+  filter: grayscale(100);
+  transition: filter 0.3s ease-in-out;
+}
+.photo__image:hover {
+  filter: grayscale(0);
 }
 
 .footer {

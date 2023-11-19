@@ -6,15 +6,13 @@
 }
 
 .about {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 20px 0 20px;
 
     &__title {
         font-size: 33px;
         font-weight: 600;
         color: $bandsite-black;
-        padding-top: 28px;
-        padding-bottom: 12px;
+        padding: 28px 0 12px 0;
     }
 
     &__photo-container {
@@ -73,15 +71,25 @@
     background-color: $alabaster;
     display: flex;
     flex-flow: column wrap;
+    padding: 0 20px 0 20px;
 
     &__title {
-
+        font-size: 33px;
+        font-weight: 600;
+        color: $bandsite-black;
+        padding: 28px 0 12px 0;
 
     }
 
     &__image {
         width: 100%;
         height: auto;
-        padding: 10px 20px;
+        padding: 0 0 20px 0;
+        filter: grayscale(100);
+        transition: filter 0.3s ease-in-out;
+        
+        &:hover {
+            filter: grayscale(0);
+        }
     }
 }
