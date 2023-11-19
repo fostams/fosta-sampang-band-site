@@ -1,43 +1,50 @@
 @use 'variables' as *;
+@use './fonts';
 
 .main {
     width: 100%;
 }
 
 .about {
-    padding-left: 16px;
-    padding-right: 16px;
-    
+    padding-left: 20px;
+    padding-right: 20px;
 
     &__title {
-        font-size: 30px;
+        font-size: 33px;
         font-weight: 600;
-        padding-top: 24px;
-        padding-bottom: 16px;
         color: $bandsite-black;
+        padding-top: 28px;
+        padding-bottom: 12px;
+    }
+
+    &__photo-container {
+        overflow: hidden;
+        height: 48.5vw;
+        position: relative;
     }
 
     &__photo {
+        display: block;
         width: 100%;
-        height: auto; // figure out how to crop top of image
+        height: auto;
+        position: absolute;
+        bottom: 0;
         padding: 0;
     }
 
     &__quote {
         color: $bandsite-black;
+        font-size: 19px;
         font-weight: 600;
-        font-size: 17.75px;
         line-height: 30px;
-        padding: 16px 0;
-        // margin: 0;
+        padding: 18px 0 4px 0;
     }
 
     &__author {
         color: $bandsite-black;
-        /* font-size: 14px;
-        line-height: 22px;
-        font-weight: 600; */
-        // margin: 0;
+        font-weight: 600;
+        font-size: 19px;
+        line-height: 30px;
     }
 
     &__description {
@@ -46,20 +53,19 @@
     }
 
     &__description-title {
-        /* font-size: 13px;
-        line-height: 18px;
-        font-weight: 400; */
-        padding-top: 24px;
-        padding-bottom: 16px;
-        // margin: 0;
+        color: $bandsite-darkblack;
+        font-size: 20px;
+        font-weight: 550;
+        padding-top: 29px;
+        padding-bottom: 20px;
     }
 
     &__description-paragraph {
-        /* font-size: 13px;
-        line-height: 18px;
-        font-weight: 400; */
-        padding: 0 0 16px;
-        // margin: 0;
+        color: $bandsite-black;
+        font-size: 17.75px;
+        line-height: 24px;
+        font-weight: 400;
+        padding: 0 0 20px 0;
     }
 }
 
@@ -76,6 +82,6 @@
     &__image {
         width: 100%;
         height: auto;
-        padding: 8px 0;
+        padding: 10px 20px;
     }
 }

@@ -1,1 +1,7 @@
+@use 'variables' as *;
 @use './fonts';
+
+.footer {
+    background-color: $bandsite-black;
+    color: $white;
+}

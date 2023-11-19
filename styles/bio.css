@@ -53,11 +53,11 @@
 }
 .nav__link--active {
   font-weight: 600;
-  border-bottom: 3.5px solid #FFFFFF;
+  border-bottom: 3.8px solid #FFFFFF;
 }
 .nav__link:hover {
   font-weight: 600;
-  border-bottom: 3.5px solid #FFFFFF;
+  border-bottom: 3.8px solid #FFFFFF;
 }
 
 .hero {
@@ -75,9 +75,9 @@
   justify-content: center;
 }
 .hero__title {
-  font-size: 30px;
+  font-size: 32.5px;
   font-weight: 550;
-  padding-left: 16px;
+  padding-left: 20px;
   color: #FFFFFF;
 }
 
@@ -86,50 +86,59 @@
 }
 
 .about {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .about__title {
-  font-size: 30px;
+  font-size: 33px;
   font-weight: 600;
-  padding-top: 24px;
-  padding-bottom: 16px;
   color: #323232;
+  padding-top: 28px;
+  padding-bottom: 12px;
+}
+.about__photo-container {
+  overflow: hidden;
+  height: 48.5vw;
+  position: relative;
 }
 .about__photo {
+  display: block;
   width: 100%;
   height: auto;
+  position: absolute;
+  bottom: 0;
   padding: 0;
 }
 .about__quote {
   color: #323232;
+  font-size: 19px;
   font-weight: 600;
-  font-size: 17.75px;
   line-height: 30px;
-  padding: 16px 0;
+  padding: 18px 0 4px 0;
 }
 .about__author {
   color: #323232;
-  /* font-size: 14px;
-  line-height: 22px;
-  font-weight: 600; */
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 30px;
 }
 .about__description {
   display: flex;
   flex-direction: column;
 }
 .about__description-title {
-  /* font-size: 13px;
-  line-height: 18px;
-  font-weight: 400; */
-  padding-top: 24px;
-  padding-bottom: 16px;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 550;
+  padding-top: 29px;
+  padding-bottom: 20px;
 }
 .about__description-paragraph {
-  /* font-size: 13px;
-  line-height: 18px;
-  font-weight: 400; */
-  padding: 0 0 16px;
+  color: #323232;
+  font-size: 17.75px;
+  line-height: 24px;
+  font-weight: 400;
+  padding: 0 0 20px 0;
 }
 
 .photo {
@@ -140,7 +149,12 @@
 .photo__image {
   width: 100%;
   height: auto;
-  padding: 8px 0;
+  padding: 10px 20px;
+}
+
+.footer {
+  background-color: #323232;
+  color: #FFFFFF;
 }
 
 * {
@@ -151,7 +165,4 @@
 
 /* .page {
     margin: 0;
-} */
-.site {
-  margin: 0;
-}/*# sourceMappingURL=bio.css.map */
+} *//*# sourceMappingURL=bio.css.map */
