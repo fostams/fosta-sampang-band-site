@@ -13,8 +13,12 @@
         <nav class="nav__container">
             <a href="./index.html" class="nav__logo nav__hyperlink">BANDSITE</a>
             <ul class="nav__links">
-                <li class="nav__link nav__link--active"><a href="./index.html" class="nav__hyperlink">Biography</a></li>
-                <li class="nav__link"><a href="" class="nav__hyperlink">Shows</a></li>
+                <li class="nav__link nav__link--active">
+                    <a href="./index.html" class="nav__hyperlink">Biography</a>
+                </li>
+                <li class="nav__link">
+                    <a href="" class="nav__hyperlink nav__hyperlink--inactive">Shows</a>
+                </li>
             </ul>
         </nav>
         <section class="hero">
@@ -54,30 +58,39 @@
     <footer class="footer">
         <section class="contact">
             <h2 class="contact__title">Get in Touch</h2>
-            <div class="social">
-                <a href="http://www.instagram.com"><img class="social__icon" src="./assets/icons/Icon-instagram.svg" alt="instagram"></a>
-                <a href="http://www.facebook.com"><img class="social__icon" src="./assets/icons/Icon-facebook.svg" alt="facebook"></a>
-                <a href="http://www.twitter.com"><img class="social__icon" src="./assets/icons/Icon-twitter.svg" alt="twitter"></a>
+            <div class="contact__social">
+                <a href="http://www.instagram.com"><img class="contact__social__icon" src="./assets/icons/Icon-instagram.svg" alt="instagram"></a>
+                <a href="http://www.facebook.com"><img class="contact__social__icon" src="./assets/icons/Icon-facebook.svg" alt="facebook"></a>
+                <a href="http://www.twitter.com"><img class="contact__social__icon" src="./assets/icons/Icon-twitter.svg" alt="twitter"></a>
             </div>
-            <article class="contact__info">
-                <h3 class="contact__info__title">Cam Adams<br>The Bees Knees Management</h3>
-                <p class="contact__info__description">503 Broadway Penthouse,<br>New York, NY 10012, USA</p>
-                <email class="contact__info__description">info@thebeesknees.com</email>
-            </article>
-            <article class="contact__info">
-                <h3 class="contact__info__title">Pearl Gregg<br>Limitless Artist Group</h3>
-                <p class="contact__info__description">Booking Agent for<br>US / South America / Japan</p>
-                <email class="contact__info__description">pearl.gregg@limitlessag.com</email>
-            </article>
-            <article class="contact__info">
-                <h3 class="contact__info__title">Carson Whyte<br>ARCH Entertainment</h3>
-                <p class="contact__info__description">Booking Agent for<br>UK / EU / AU</p>
-                <email class="contact__info__description">cwhyte@archentertainment.com</email>
-            </article>
-            <section class="">
-                <h2 class="nav__logo nav__hyperlink"><a href="index.html">BANDSITE</a></h2>
-                <h3 class="nav__copyright">Copyright The Bees Knees © 2021 All Rights Reserved</h3>
-            </section>
+            <div class="agent">
+                <article class="agent__info">
+                    <h3 class="agent__info__title">Cam Adams<br>The Bees Knees Management</h3>
+                    <p class="agent__info__description">503 Broadway Penthouse</p>
+                    <p class="agent__info__location">New York, NY 10012, USA</p>
+                    <div class="agent__info__email-container">
+                        <a class="agent__info__email" href="mailto:info@thebeesknees.com">info@thebeesknees.com</a>
+                    </div>
+                </article>
+                <article class="agent__info">
+                    <h3 class="agent__info__title">Pearl Gregg<br>Limitless Artist Group</h3>
+                    <p class="agent__info__description">Booking Agent for</p>
+                    <p class="agent__info__location">US / South America / Japan</p>
+                    <div class="agent__info__email-container">
+                        <a class="agent__info__email" href="mailto:pearl.gregg@limitlessag.com">pearl.gregg@limitlessag.com</a>
+                    </div>
+                </article>
+                <article class="agent__info">
+                    <h3 class="agent__info__title">Carson Whyte<br>ARCH Entertainment</h3>
+                    <p class="agent__info__description">Booking Agent for</p>
+                    <p class="agent__info__location">UK / EU / AU</p>
+                    <div class="agent__info__email-container">
+                        <a class="agent__info__email" href="mailto:cwhyte@archentertainment.com">cwhyte@archentertainment.com</a>
+                    </div>
+                </article>
+            </div>
+            <a href="./index.html" class="nav__logo--footer nav__hyperlink">BANDSITE</a>
+            <h3 class="copyright">Copyright The Bees Knees © 2021 All Rights Reserved</h3>
         </section>
     </footer>
 </body>

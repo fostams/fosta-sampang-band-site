@@ -4,4 +4,77 @@
 .footer {
     background-color: $bandsite-black;
     color: $white;
+    width: 100%;
+}
+
+.contact {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    padding: 0 20px;
+    position: relative;
+
+    &__title {
+        font-size: 33px;
+        font-weight: 600;
+        padding: 36px 0 20px 0;
+    }
+
+    &__social {
+
+        &__icon {
+            width: 30px;
+            height: 30px;
+            margin: 0 32px 0 0;
+        }
+    }
+}
+
+.agent {
+    
+    &__info {
+        font-size: 15px;
+        line-height: 24px;
+        font-weight: 400;
+
+        &__title {
+            font-weight: 600;
+            padding: 28px 0 0 0;
+        }
+
+        &__description {
+            font-size: 17px;
+            // line-height: 30px;
+            padding: 22px 0 0 0;
+        }
+
+        &__location {
+            font-size: 17.5px;
+        }
+
+        &__email-container {
+            padding: 20px 0 4px 0;
+        }
+
+        &__email {
+            text-decoration: none;
+            font-size: 17px;
+            color: $white;
+        }
+    }
+}
+
+.nav__logo--footer {
+    font-size: 31px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 75px 0 0 0;
+    // padding: 20px 20px 0 20px;
+    // text-align: center;
+}
+
+.copyright {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 16px 0 22px 0;
 }
