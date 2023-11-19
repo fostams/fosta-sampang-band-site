@@ -1,5 +1,6 @@
 @use 'variables' as *;
 @use './fonts';
+@import 'mixins'; // @use causes undefined mixin
 
 .footer {
     background-color: $bandsite-black;
@@ -69,8 +70,6 @@
     font-weight: 400;
     letter-spacing: 1px;
     padding: 75px 0 0 0;
-    // padding: 20px 20px 0 20px;
-    // text-align: center;
 }
 
 .copyright {

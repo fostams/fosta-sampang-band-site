@@ -1,5 +1,6 @@
 @use 'variables' as *;
 @use './fonts';
+@import 'mixins';
 
 .nav {
     background-color: $bandsite-black;
@@ -11,6 +12,11 @@
         display: flex;
         flex-flow: column wrap;
         align-items: center;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+        }
     }
 
     &__hyperlink {
@@ -27,12 +33,20 @@
             }
         }   
     }
+    
+    &__logo-container {
+        padding: 20px 20px 0 20px;
+
+        @include tablet {
+            padding: 29px 49px;
+        }
+        
+    }
 
     &__logo {
         font-size: 30px;
         font-weight: 400;
         letter-spacing: 1px;
-        padding: 20px 20px 0 20px;
         text-align: center;
     }
 
@@ -47,24 +61,44 @@
         padding: 0;
         display: flex;
         align-items: center;
+
+        @include tablet {
+            width: auto;
+        }
     }
 
     &__link {
         width: 100%;
         text-align: center;
 
+            @include tablet {
+                margin: 0 37px;
+            }
+
         & a {
             display: block;
             padding: 10px;
+
+            @include tablet {
+                padding: 34px 0;
+            }
         }
 
         &--active {
         font-weight: 600;
         border-bottom: 3.8px solid $white;
+            
+            @include tablet {
+                border-bottom: 4px solid $white;
+            }
         }
 
         &:hover {
             border-bottom: 3.8px solid $white;
+
+            @include tablet {
+                border-bottom: 4px solid $white;
+            }
         }
     }
 }
@@ -88,5 +122,10 @@
         font-weight: 550;
         padding: 0 20px;
         color: $white;
+
+        @include tablet {
+            font-size: 80px;
+            padding: 0 49px;
+        }
     }
 }
