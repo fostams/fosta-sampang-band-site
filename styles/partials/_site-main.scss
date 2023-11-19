@@ -1,0 +1,81 @@
+@use 'variables' as *;
+
+.main {
+    width: 100%;
+}
+
+.about {
+    padding-left: 16px;
+    padding-right: 16px;
+    
+
+    &__title {
+        font-size: 30px;
+        font-weight: 600;
+        padding-top: 24px;
+        padding-bottom: 16px;
+        color: $bandsite-black;
+    }
+
+    &__photo {
+        width: 100%;
+        height: auto; // figure out how to crop top of image
+        padding: 0;
+    }
+
+    &__quote {
+        color: $bandsite-black;
+        font-weight: 600;
+        font-size: 17.75px;
+        line-height: 30px;
+        padding: 16px 0;
+        // margin: 0;
+    }
+
+    &__author {
+        color: $bandsite-black;
+        /* font-size: 14px;
+        line-height: 22px;
+        font-weight: 600; */
+        // margin: 0;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__description-title {
+        /* font-size: 13px;
+        line-height: 18px;
+        font-weight: 400; */
+        padding-top: 24px;
+        padding-bottom: 16px;
+        // margin: 0;
+    }
+
+    &__description-paragraph {
+        /* font-size: 13px;
+        line-height: 18px;
+        font-weight: 400; */
+        padding: 0 0 16px;
+        // margin: 0;
+    }
+}
+
+.photo {
+    background-color: $alabaster;
+    display: flex;
+    flex-flow: column wrap;
+
+    &__title {
+
+
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        padding: 8px 0;
+    }
+}
