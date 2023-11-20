@@ -52,7 +52,7 @@
 }
 @media screen and (min-width: 1028px) {
   .nav__logo-container {
-    padding: 38px 50px 38px 180px;
+    padding: 38px 50px 38px 120px;
   }
 }
 .nav__logo {
@@ -162,7 +162,7 @@
 }
 @media screen and (min-width: 1028px) {
   .hero__title {
-    padding: 0 180px;
+    padding: 0 125px;
   }
 }
 
@@ -190,6 +190,12 @@
     padding: 66px 49px 24px 49px;
   }
 }
+@media screen and (min-width: 1028px) {
+  .about__title {
+    font-size: 48px;
+    padding: 66px 49px 24px 125px;
+  }
+}
 .about__photo-container {
   overflow: hidden;
   height: 48.5vw;
@@ -208,6 +214,11 @@
     padding: 0 128px;
   }
 }
+@media screen and (min-width: 1028px) {
+  .about__photo {
+    padding: 0 200px;
+  }
+}
 .about__quote {
   color: #323232;
   font-size: 19px;
@@ -222,6 +233,11 @@
     padding: 40px 128px 10px 128px;
   }
 }
+@media screen and (min-width: 1028px) {
+  .about__quote {
+    padding: 40px 250px 10px 200px;
+  }
+}
 .about__author {
   color: #323232;
   font-weight: 600;
@@ -233,6 +249,11 @@
     font-size: 21.5px;
     line-height: 42px;
     padding: 0 128px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about__author {
+    padding: 0 200px;
   }
 }
 .about__description {
@@ -252,11 +273,21 @@
   }
 }
 @media screen and (min-width: 768px) {
+  .about__description-title {
+    padding: 64px 128px 30px 200px;
+  }
+}
+@media screen and (min-width: 768px) {
   .about__description-paragraphs {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 0 116px;
+  }
+}
+@media screen and (min-width: 1028px) {
+  .about__description-paragraphs {
+    padding: 0 190px;
   }
 }
 .about__description-paragraph {
@@ -283,6 +314,11 @@
 @media screen and (min-width: 768px) {
   .photo {
     padding: 0 49px 21px 49px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .photo {
+    padding: 0 124px 21px 125px;
   }
 }
 .photo__title {
@@ -356,9 +392,20 @@
     padding: 18px 38px 20px 49px;
   }
 }
+@media screen and (min-width: 1028px) {
+  .contact__title {
+    font-size: 32px;
+    padding: 18px 38px 20px 125px;
+  }
+}
 @media screen and (min-width: 768px) {
   .contact__social {
     padding: 26px 0 24px 0;
+  }
+}
+@media screen and (min-width: 1028px) {
+  .contact__social {
+    padding: 24px 0 22px 0;
   }
 }
 .contact__social__icon {
@@ -373,6 +420,13 @@
     margin: 0 32px 0 0;
   }
 }
+@media screen and (min-width: 1028px) {
+  .contact__social__icon {
+    width: 24px;
+    height: 24px;
+    margin: 0 26px 0 0;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .agent {
@@ -380,6 +434,12 @@
     flex-flow: row wrap;
     justify-content: space-between;
     padding: 0 70px 21px 49px;
+  }
+}
+@media screen and (min-width: 1028px) {
+  .agent {
+    padding: 0 70px 21px 125px;
+    justify-content: flex-start;
   }
 }
 .agent__info {
@@ -391,6 +451,13 @@
   .agent__info {
     font-size: 16px;
     line-height: 25px;
+  }
+}
+@media screen and (min-width: 1028px) {
+  .agent__info {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 0 50px 0 0;
   }
 }
 .agent__info__title {
@@ -407,12 +474,23 @@
     padding: 35px 0 0 0;
   }
 }
+@media screen and (min-width: 1028px) {
+  .agent__info__description {
+    font-size: 14px;
+    padding: 24px 0 0 0;
+  }
+}
 .agent__info__location {
   font-size: 17.5px;
 }
 @media screen and (min-width: 768px) {
   .agent__info__location {
     font-size: 19px;
+  }
+}
+@media screen and (min-width: 1028px) {
+  .agent__info__location {
+    font-size: 14px;
   }
 }
 .agent__info__email-container {
@@ -433,6 +511,11 @@
     font-size: 18.5px;
   }
 }
+@media screen and (min-width: 1028px) {
+  .agent__info__email {
+    font-size: 13px;
+  }
+}
 
 .nav__logo--footer {
   font-size: 31px;
@@ -450,6 +533,13 @@
     transform: translatey(180%);
   }
 }
+@media screen and (min-width: 1028px) {
+  .nav__logo--footer {
+    font-size: 20px;
+    padding: 0 0 0 25px;
+    transform: translatey(225%);
+  }
+}
 
 .copyright {
   font-size: 14px;
@@ -461,6 +551,13 @@
     font-size: 18px;
     font-weight: 400;
     padding: 44px 0 50px 49px;
+  }
+}
+@media screen and (min-width: 1028px) {
+  .copyright {
+    font-size: 13px;
+    font-weight: 400;
+    padding: 44px 0 50px 125px;
   }
 }
 

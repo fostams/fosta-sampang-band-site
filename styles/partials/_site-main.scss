@@ -23,6 +23,10 @@
             font-size: 48px;
             padding: 66px 49px 24px 49px;
         }
+        @include desktop {
+            font-size: 48px;
+            padding: 66px 49px 24px 125px;
+        }
     }
 
     &__photo-container {
@@ -42,6 +46,9 @@
         @include tablet {
             padding: 0 128px;
         }
+        @include desktop {
+            padding: 0 200px;
+        }
     }
 
     &__quote {
@@ -56,6 +63,9 @@
             line-height: 42px;
             padding: 40px 128px 10px 128px;
         }
+        @include desktop {
+            padding: 40px 250px 10px 200px;
+        }
     }
 
     &__author {
@@ -68,6 +78,9 @@
             font-size: 21.5px;
             line-height: 42px;
             padding: 0 128px;
+        }
+        @include tablet {
+            padding: 0 200px;
         }
     }
 
@@ -86,6 +99,9 @@
             font-size: 32px;
             padding: 64px 128px 30px 128px;
         }
+        @include tablet {
+            padding: 64px 128px 30px 200px;
+        }
 
     }
 
@@ -95,6 +111,9 @@
             flex-direction: row;
             justify-content: space-between;
             padding: 0 116px;
+        }
+        @include desktop {
+            padding: 0 190px;
         }
     }
     
@@ -121,6 +140,9 @@
 
     @include tablet {
         padding: 0 49px 21px 49px;
+    }
+    @include tablet {
+        padding: 0 124px 21px 125px;
     }
 
     &__title {

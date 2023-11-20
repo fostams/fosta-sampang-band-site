@@ -35,11 +35,18 @@
             font-size: 48px;
             padding: 18px 38px 20px 49px;
         }
+        @include desktop {
+            font-size: 32px;
+            padding: 18px 38px 20px 125px;
+        }
     }
 
     &__social {
         @include tablet {
             padding: 26px 0 24px 0;
+        }
+        @include desktop {
+            padding: 24px 0 22px 0;
         }
 
         &__icon {
@@ -52,6 +59,11 @@
                 height: 31px;
                 margin: 0 32px 0 0;
             }
+            @include desktop {
+                width: 24px;
+                height: 24px;
+                margin: 0 26px 0 0;
+            }
         }
     }
 }
@@ -63,6 +75,10 @@
         justify-content: space-between;
         padding: 0 70px 21px 49px;
     }
+    @include desktop {
+        padding: 0 70px 21px 125px;
+        justify-content: flex-start;
+    }
 
     &__info {
         font-size: 15px;
@@ -72,6 +88,11 @@
         @include tablet {
             font-size: 16px;
             line-height: 25px;
+        }
+        @include desktop {
+            font-size: 12px;
+            line-height: 20px;
+            padding: 0 50px 0 0;
         }
 
         &__title {
@@ -87,6 +108,10 @@
                 font-size: 18.5px;
                 padding: 35px 0 0 0;
             }
+            @include desktop {
+                font-size: 14px;
+                padding: 24px 0 0 0;
+            }
         }
 
         &__location {
@@ -94,6 +119,9 @@
 
             @include tablet {
                 font-size: 19px;
+            }
+            @include desktop {
+                font-size: 14px;
             }
         }
 
@@ -113,6 +141,9 @@
             @include tablet {
                 font-size: 18.5px;
             }
+            @include desktop {
+                font-size: 13px;
+            }
         }
     }
 }
@@ -131,6 +162,11 @@
         width: 250px;
         transform: translatey(180%);
     }
+    @include desktop {
+        font-size: 20px;
+        padding: 0 0 0 25px;
+        transform: translatey(225%);
+    }
 }
 
 .copyright {
@@ -142,5 +178,10 @@
         font-size: 18px;
         font-weight: 400;
         padding: 44px 0 50px 49px;
+    }
+    @include desktop {
+        font-size: 13px;
+        font-weight: 400;
+        padding: 44px 0 50px 125px;
     }
 }
