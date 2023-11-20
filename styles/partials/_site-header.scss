@@ -1,6 +1,6 @@
 @use 'variables' as *;
 @use './fonts';
-@import 'mixins';
+@import 'mixins'; // @use causes undefined mixin
 
 .nav {
     background-color: $bandsite-black;

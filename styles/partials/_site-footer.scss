@@ -14,29 +14,62 @@
     width: 100%;
     padding: 0 20px;
     position: relative;
+    @include tablet {
+        padding: 0;
+    }
+    &__title-social {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 
     &__title {
         font-size: 33px;
         font-weight: 600;
         padding: 36px 0 20px 0;
+
+        @include tablet {
+            font-size: 48px;
+            padding: 66px 38px 20px 49px;
+        }
     }
 
     &__social {
+        @include tablet {
+            padding: 66px 0 24px 0;
+        }
 
         &__icon {
             width: 30px;
             height: 30px;
             margin: 0 32px 0 0;
+
+            @include tablet {
+                width: 31px;
+                height: 31px;
+                margin: 0 32px 0 0;
+            }
         }
     }
 }
 
 .agent {
-    
+    @include tablet {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding: 0 70px 21px 49px; //check later
+    }
+
     &__info {
         font-size: 15px;
         line-height: 24px;
         font-weight: 400;
+
+        @include tablet {
+            font-size: 16px;
+            line-height: 25px;
+        }
 
         &__title {
             font-weight: 600;
@@ -45,22 +78,38 @@
 
         &__description {
             font-size: 17px;
-            // line-height: 30px;
             padding: 22px 0 0 0;
+
+            @include tablet {
+                font-size: 18.5px;
+                padding: 35px 0 0 0;
+            }
         }
 
         &__location {
             font-size: 17.5px;
+
+            @include tablet {
+                font-size: 19px;
+            }
         }
 
         &__email-container {
             padding: 20px 0 4px 0;
+
+            @include tablet {
+                padding: 35px 0 0 0;
+            }
         }
 
         &__email {
             text-decoration: none;
             font-size: 17px;
             color: $white;
+
+            @include tablet {
+                font-size: 18.5px;
+            }
         }
     }
 }
@@ -70,10 +119,21 @@
     font-weight: 400;
     letter-spacing: 1px;
     padding: 75px 0 0 0;
+
+    @include tablet {
+        position: absolute;
+        left: 820px;
+    }
 }
 
 .copyright {
     font-size: 14px;
     font-weight: 400;
     padding: 16px 0 22px 0;
+
+    @include tablet {
+        font-size: 18px;
+        font-weight: 400;
+        padding: 44px 0 50px 49px;
+    }
 }

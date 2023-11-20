@@ -305,21 +305,63 @@
   padding: 0 20px;
   position: relative;
 }
+@media screen and (min-width: 768px) {
+  .contact {
+    padding: 0;
+  }
+}
+.contact__title-social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .contact__title {
   font-size: 33px;
   font-weight: 600;
   padding: 36px 0 20px 0;
+}
+@media screen and (min-width: 768px) {
+  .contact__title {
+    font-size: 48px;
+    padding: 66px 38px 20px 49px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact__social {
+    padding: 66px 0 24px 0;
+  }
 }
 .contact__social__icon {
   width: 30px;
   height: 30px;
   margin: 0 32px 0 0;
 }
+@media screen and (min-width: 768px) {
+  .contact__social__icon {
+    width: 31px;
+    height: 31px;
+    margin: 0 32px 0 0;
+  }
+}
 
+@media screen and (min-width: 768px) {
+  .agent {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 0 70px 21px 49px;
+  }
+}
 .agent__info {
   font-size: 15px;
   line-height: 24px;
   font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .agent__info {
+    font-size: 16px;
+    line-height: 25px;
+  }
 }
 .agent__info__title {
   font-weight: 600;
@@ -329,16 +371,37 @@
   font-size: 17px;
   padding: 22px 0 0 0;
 }
+@media screen and (min-width: 768px) {
+  .agent__info__description {
+    font-size: 18.5px;
+    padding: 35px 0 0 0;
+  }
+}
 .agent__info__location {
   font-size: 17.5px;
 }
+@media screen and (min-width: 768px) {
+  .agent__info__location {
+    font-size: 19px;
+  }
+}
 .agent__info__email-container {
   padding: 20px 0 4px 0;
+}
+@media screen and (min-width: 768px) {
+  .agent__info__email-container {
+    padding: 35px 0 0 0;
+  }
 }
 .agent__info__email {
   text-decoration: none;
   font-size: 17px;
   color: #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .agent__info__email {
+    font-size: 18.5px;
+  }
 }
 
 .nav__logo--footer {
@@ -347,11 +410,24 @@
   letter-spacing: 1px;
   padding: 75px 0 0 0;
 }
+@media screen and (min-width: 768px) {
+  .nav__logo--footer {
+    position: absolute;
+    left: 820px;
+  }
+}
 
 .copyright {
   font-size: 14px;
   font-weight: 400;
   padding: 16px 0 22px 0;
+}
+@media screen and (min-width: 768px) {
+  .copyright {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 44px 0 50px 49px;
+  }
 }
 
 * {
