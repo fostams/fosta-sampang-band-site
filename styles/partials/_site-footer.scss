@@ -14,13 +14,16 @@
     width: 100%;
     padding: 0 20px;
     position: relative;
+
     @include tablet {
         padding: 0;
     }
+
     &__title-social {
         display: flex;
         flex-direction: row;
         align-items: center;
+
     }
 
     &__title {
@@ -30,13 +33,13 @@
 
         @include tablet {
             font-size: 48px;
-            padding: 66px 38px 20px 49px;
+            padding: 18px 38px 20px 49px;
         }
     }
 
     &__social {
         @include tablet {
-            padding: 66px 0 24px 0;
+            padding: 26px 0 24px 0;
         }
 
         &__icon {
@@ -58,7 +61,7 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
-        padding: 0 70px 21px 49px; //check later
+        padding: 0 70px 21px 49px;
     }
 
     &__info {
@@ -121,8 +124,12 @@
     padding: 75px 0 0 0;
 
     @include tablet {
-        position: absolute;
-        left: 820px;
+        padding: 0 0 0 30px;
+        align-self: flex-end;
+        top: 200px;
+        order: -1;
+        width: 250px;
+        transform: translatey(180%);
     }
 }
 

@@ -1,8 +1,6 @@
-// start with mobile display first (no media query for mobile)
-// take look at tablet & add styles what you need - add media query (768px breakpoint)
-// look at desktop, do styles (1280px breakpoint)
-// go back & see what the in between is
-// if there's any weird breakpoints
+// mobile's perfect resemblance to mockup is at width: 426px
+// tablet's perfect resemblance to mockup is at width: 1024px
+// this decision was made from measuring the width of the mockup pdfs
 
 @use './partials/variables';
 @use './partials/mixins';

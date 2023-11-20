@@ -323,12 +323,12 @@
 @media screen and (min-width: 768px) {
   .contact__title {
     font-size: 48px;
-    padding: 66px 38px 20px 49px;
+    padding: 18px 38px 20px 49px;
   }
 }
 @media screen and (min-width: 768px) {
   .contact__social {
-    padding: 66px 0 24px 0;
+    padding: 26px 0 24px 0;
   }
 }
 .contact__social__icon {
@@ -412,8 +412,12 @@
 }
 @media screen and (min-width: 768px) {
   .nav__logo--footer {
-    position: absolute;
-    left: 820px;
+    padding: 0 0 0 30px;
+    align-self: flex-end;
+    top: 200px;
+    order: -1;
+    width: 250px;
+    transform: translatey(180%);
   }
 }
 
