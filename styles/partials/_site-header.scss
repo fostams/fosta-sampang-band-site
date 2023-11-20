@@ -40,7 +40,9 @@
         @include tablet {
             padding: 29px 49px;
         }
-        
+        @include desktop {
+            padding: 38px 50px 38px 180px;
+        }
     }
 
     &__logo {
@@ -48,6 +50,10 @@
         font-weight: 400;
         letter-spacing: 1px;
         text-align: center;
+
+        @include desktop {
+            font-size: 31px;
+        }
     }
 
     &__links {
@@ -65,6 +71,9 @@
         @include tablet {
             width: auto;
         }
+        @include desktop {
+            font-size: 18px;
+        }
     }
 
     &__link {
@@ -74,6 +83,9 @@
             @include tablet {
                 margin: 0 37px;
             }
+            @include desktop {
+                margin: 0 25px;
+            }
 
         & a {
             display: block;
@@ -81,6 +93,10 @@
 
             @include tablet {
                 padding: 34px 0;
+            }
+
+            @include desktop {
+                padding: 43px 0;
             }
         }
 
@@ -126,6 +142,9 @@
         @include tablet {
             font-size: 80px;
             padding: 0 49px;
+        }
+        @include desktop {
+            padding: 0 180px;
         }
     }
 }
