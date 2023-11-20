@@ -43,37 +43,37 @@
   color: #FFFFFF;
 }
 .nav__logo-container {
-  padding: 20px 20px 0 20px;
+  padding: 1.25rem 1.25rem 0 1.25rem;
 }
 @media screen and (min-width: 768px) {
   .nav__logo-container {
-    padding: 29px 49px;
+    padding: 1.813rem 3.063rem;
   }
 }
 @media screen and (min-width: 1028px) {
   .nav__logo-container {
-    padding: 38px 50px 38px 120px;
+    padding: 2.375rem 3.125rem 2.375rem 7.5rem;
   }
 }
 .nav__logo {
-  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: 0.063rem;
   text-align: center;
 }
 @media screen and (min-width: 1028px) {
   .nav__logo {
-    font-size: 31px;
+    font-size: 1.938rem;
   }
 }
 .nav__links {
   list-style-type: none;
-  font-size: 17px;
+  font-size: 1.063rem;
   font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0.5px;
+  line-height: 1.375rem;
+  letter-spacing: 0.031rem;
   width: 100%;
-  height: 46px;
+  height: 2.875rem;
   padding: 0;
   display: flex;
   align-items: center;
@@ -85,7 +85,7 @@
 }
 @media screen and (min-width: 1028px) {
   .nav__links {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 .nav__link {
@@ -94,43 +94,43 @@
 }
 @media screen and (min-width: 768px) {
   .nav__link {
-    margin: 0 37px;
+    margin: 0 2.313rem;
   }
 }
 @media screen and (min-width: 1028px) {
   .nav__link {
-    margin: 0 25px;
+    margin: 0 1.563;
   }
 }
 .nav__link a {
   display: block;
-  padding: 10px;
+  padding: 0.625rem;
 }
 @media screen and (min-width: 768px) {
   .nav__link a {
-    padding: 34px 0;
+    padding: 2.125rem 0;
   }
 }
 @media screen and (min-width: 1028px) {
   .nav__link a {
-    padding: 43px 0;
+    padding: 2.688rem 0;
   }
 }
 .nav__link--active {
   font-weight: 600;
-  border-bottom: 3.8px solid #FFFFFF;
+  border-bottom: 0.238rem solid #FFFFFF;
 }
 @media screen and (min-width: 768px) {
   .nav__link--active {
-    border-bottom: 4px solid #FFFFFF;
+    border-bottom: 0.25rem solid #FFFFFF;
   }
 }
 .nav__link:hover {
-  border-bottom: 3.8px solid #FFFFFF;
+  border-bottom: 0.238rem solid #FFFFFF;
 }
 @media screen and (min-width: 768px) {
   .nav__link:hover {
-    border-bottom: 4px solid #FFFFFF;
+    border-bottom: 0.25rem solid #FFFFFF;
   }
 }
 
@@ -149,20 +149,20 @@
   justify-content: center;
 }
 .hero__title {
-  font-size: 32.5px;
+  font-size: 2.031rem;
   font-weight: 550;
-  padding: 0 20px;
+  padding: 0 1.25rem;
   color: #FFFFFF;
 }
 @media screen and (min-width: 768px) {
   .hero__title {
-    font-size: 80px;
-    padding: 0 49px;
+    font-size: 5.563rem;
+    padding: 0 3.063rem;
   }
 }
 @media screen and (min-width: 1028px) {
   .hero__title {
-    padding: 0 125px;
+    padding: 0 7.813rem;
   }
 }
 
@@ -171,7 +171,7 @@
 }
 
 .about {
-  padding: 0 20px;
+  padding: 0 1.25rem;
 }
 @media screen and (min-width: 768px) {
   .about {
@@ -179,21 +179,21 @@
   }
 }
 .about__title {
-  font-size: 33px;
+  font-size: 2.063rem;
   font-weight: 600;
   color: #323232;
-  padding: 28px 0 12px 0;
+  padding: 1.75rem 0 0.75rem 0;
 }
 @media screen and (min-width: 768px) {
   .about__title {
-    font-size: 48px;
-    padding: 66px 49px 24px 49px;
+    font-size: 3rem;
+    padding: 4.125rem 3.063rem 1.5rem 3.063rem;
   }
 }
 @media screen and (min-width: 1028px) {
   .about__title {
-    font-size: 48px;
-    padding: 66px 49px 24px 125px;
+    font-size: 3rem;
+    padding: 4.125rem 3.063rem 1.5rem 7.813rem;
   }
 }
 .about__photo-container {
@@ -211,49 +211,49 @@
 }
 @media screen and (min-width: 768px) {
   .about__photo {
-    padding: 0 128px;
+    padding: 0 8rem;
   }
 }
 @media screen and (min-width: 1028px) {
   .about__photo {
-    padding: 0 200px;
+    padding: 0 12.5rem;
   }
 }
 .about__quote {
   color: #323232;
-  font-size: 19px;
+  font-size: 1.188rem;
   font-weight: 600;
-  line-height: 30px;
-  padding: 18px 0 4px 0;
+  line-height: 1.875rem;
+  padding: 1.125rem 0 0.25rem 0;
 }
 @media screen and (min-width: 768px) {
   .about__quote {
-    font-size: 30px;
-    line-height: 42px;
-    padding: 40px 128px 10px 128px;
+    font-size: 1.875rem;
+    line-height: 2.625rem;
+    padding: 2.5rem 8rem 0.625rem 8rem;
   }
 }
 @media screen and (min-width: 1028px) {
   .about__quote {
-    padding: 40px 250px 10px 200px;
+    padding: 2.5rem 15.625rem 0.625rem 12.5rem;
   }
 }
 .about__author {
   color: #323232;
   font-weight: 600;
-  font-size: 19px;
-  line-height: 30px;
+  font-size: 1.188rem;
+  line-height: 1.875rem;
 }
 @media screen and (min-width: 768px) {
   .about__author {
-    font-size: 21.5px;
-    line-height: 42px;
-    padding: 0 128px;
+    font-size: 1.344rem;
+    line-height: 2.625rem;
+    padding: 0 8rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1028px) {
   .about__author {
-    padding: 0 200px;
+    padding: 0 12.5rem;
   }
 }
 .about__description {
@@ -262,19 +262,19 @@
 }
 .about__description-title {
   color: #000000;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 550;
-  padding: 29px 0 20px 0;
+  padding: 1.813rem 0 1.25rem 0;
 }
 @media screen and (min-width: 768px) {
   .about__description-title {
-    font-size: 32px;
-    padding: 64px 128px 30px 128px;
+    font-size: 2rem;
+    padding: 4rem 8rem 1.875rem 8rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1028px) {
   .about__description-title {
-    padding: 64px 128px 30px 200px;
+    padding: 4rem 8rem 1.875rem 12.5rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -282,26 +282,26 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 116px;
+    padding: 0 7.25rem;
   }
 }
 @media screen and (min-width: 1028px) {
   .about__description-paragraphs {
-    padding: 0 190px;
+    padding: 0 11.875rem;
   }
 }
 .about__description-paragraph {
   color: #323232;
-  font-size: 17.75px;
-  line-height: 24px;
+  font-size: 1.109rem;
+  line-height: 1.5rem;
   font-weight: 400;
-  padding: 0 0 20px 0;
+  padding: 0 0 1.25rem 0;
 }
 @media screen and (min-width: 768px) {
   .about__description-paragraph {
-    font-size: 18.5px;
-    line-height: 29px;
-    padding: 0 14px 40px 14px;
+    font-size: 1.156rem;
+    line-height: 1.813rem;
+    padding: 0 0.875rem 2.5rem 0.875rem;
   }
 }
 
@@ -309,28 +309,28 @@
   background-color: #FAFAFA;
   display: flex;
   flex-flow: column wrap;
-  padding: 0 20px;
+  padding: 0 1.25rem;
 }
 @media screen and (min-width: 768px) {
   .photo {
-    padding: 0 49px 21px 49px;
+    padding: 0 3.063rem 1.313rem 3.063rem;
   }
 }
 @media screen and (min-width: 768px) {
   .photo {
-    padding: 0 124px 21px 125px;
+    padding: 0 7.75rem 1.313rem 7.813rem;
   }
 }
 .photo__title {
-  font-size: 33px;
+  font-size: 2.063rem;
   font-weight: 600;
   color: #323232;
-  padding: 30px 0 12px 0;
+  padding: 1.875rem 0 0.75rem 0;
 }
 @media screen and (min-width: 768px) {
   .photo__title {
-    font-size: 48px;
-    padding: 66px 0 24px 0;
+    font-size: 3rem;
+    padding: 4.125rem 0 1.5rem 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -344,7 +344,7 @@
 .photo__image {
   width: 100%;
   height: auto;
-  padding: 0 0 20px 0;
+  padding: 0 0 1.25rem 0;
   filter: grayscale(100);
   transition: filter 0.3s ease-in-out;
 }

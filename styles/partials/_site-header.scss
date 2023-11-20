@@ -35,35 +35,35 @@
     }
     
     &__logo-container {
-        padding: 20px 20px 0 20px;
+        padding: 1.25rem 1.25rem 0 1.25rem;
 
         @include tablet {
-            padding: 29px 49px;
+            padding: 1.813rem 3.063rem;
         }
         @include desktop {
-            padding: 38px 50px 38px 120px;
+            padding: 2.375rem 3.125rem 2.375rem 7.5rem;
         }
     }
 
     &__logo {
-        font-size: 30px;
+        font-size: 1.875rem;
         font-weight: 400;
-        letter-spacing: 1px;
+        letter-spacing: 0.063rem;
         text-align: center;
 
         @include desktop {
-            font-size: 31px;
+            font-size: 1.938rem;
         }
     }
 
     &__links {
         list-style-type: none;
-        font-size: 17px;
+        font-size: 1.063rem;
         font-weight: 400;
-        line-height: 22px;
-        letter-spacing: 0.5px;
+        line-height: 1.375rem;
+        letter-spacing: 0.031rem;
         width: 100%;
-        height: 46px;
+        height: 2.875rem;
         padding: 0;
         display: flex;
         align-items: center;
@@ -72,7 +72,7 @@
             width: auto;
         }
         @include desktop {
-            font-size: 18px;
+            font-size: 1.125rem;
         }
     }
 
@@ -81,39 +81,39 @@
         text-align: center;
 
             @include tablet {
-                margin: 0 37px;
+                margin: 0 2.313rem;
             }
             @include desktop {
-                margin: 0 25px;
+                margin: 0 1.563;
             }
 
         & a {
             display: block;
-            padding: 10px;
+            padding: 0.625rem;
 
             @include tablet {
-                padding: 34px 0;
+                padding: 2.125rem 0;
             }
 
             @include desktop {
-                padding: 43px 0;
+                padding: 2.688rem 0;
             }
         }
 
         &--active {
         font-weight: 600;
-        border-bottom: 3.8px solid $white;
+        border-bottom: 0.238rem solid $white;
             
             @include tablet {
-                border-bottom: 4px solid $white;
+                border-bottom: 0.25rem solid $white;
             }
         }
 
         &:hover {
-            border-bottom: 3.8px solid $white;
+            border-bottom: 0.238rem solid $white;
 
             @include tablet {
-                border-bottom: 4px solid $white;
+                border-bottom: 0.25rem solid $white;
             }
         }
     }
@@ -134,17 +134,17 @@
     justify-content: center;
 
     &__title {
-        font-size: 32.5px;
+        font-size: 2.031rem;
         font-weight: 550;
-        padding: 0 20px;
+        padding: 0 1.25rem;
         color: $white;
 
         @include tablet {
-            font-size: 80px;
-            padding: 0 49px;
+            font-size: 5.563rem;
+            padding: 0 3.063rem;
         }
         @include desktop {
-            padding: 0 125px;
+            padding: 0 7.813rem;
         }
     }
 }

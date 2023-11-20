@@ -7,25 +7,25 @@
 }
 
 .about {
-    padding: 0 20px;
+    padding: 0 1.25rem;
     
     @include tablet {
         padding: 0;
     }
 
     &__title {
-        font-size: 33px;
+        font-size: 2.063rem;
         font-weight: 600;
         color: $bandsite-black;
-        padding: 28px 0 12px 0;
+        padding: 1.75rem 0 0.75rem 0;
 
         @include tablet {
-            font-size: 48px;
-            padding: 66px 49px 24px 49px;
+            font-size: 3rem;
+            padding: 4.125rem 3.063rem 1.5rem 3.063rem;
         }
         @include desktop {
-            font-size: 48px;
-            padding: 66px 49px 24px 125px;
+            font-size: 3rem;
+            padding: 4.125rem 3.063rem 1.5rem 7.813rem;
         }
     }
 
@@ -44,43 +44,43 @@
         padding: 0;
 
         @include tablet {
-            padding: 0 128px;
+            padding: 0 8rem;
         }
         @include desktop {
-            padding: 0 200px;
+            padding: 0 12.5rem;
         }
     }
 
     &__quote {
         color: $bandsite-black;
-        font-size: 19px;
+        font-size: 1.188rem;
         font-weight: 600;
-        line-height: 30px;
-        padding: 18px 0 4px 0;
+        line-height: 1.875rem;
+        padding: 1.125rem 0 0.25rem 0;
 
         @include tablet {
-            font-size: 30px;
-            line-height: 42px;
-            padding: 40px 128px 10px 128px;
+            font-size: 1.875rem;
+            line-height: 2.625rem;
+            padding: 2.5rem 8rem 0.625rem 8rem;
         }
         @include desktop {
-            padding: 40px 250px 10px 200px;
+            padding: 2.5rem 15.625rem 0.625rem 12.5rem;
         }
     }
 
     &__author {
         color: $bandsite-black;
         font-weight: 600;
-        font-size: 19px;
-        line-height: 30px;
+        font-size: 1.188rem;
+        line-height: 1.875rem;
 
         @include tablet {
-            font-size: 21.5px;
-            line-height: 42px;
-            padding: 0 128px;
+            font-size: 1.344rem;
+            line-height: 2.625rem;
+            padding: 0 8rem;
         }
-        @include tablet {
-            padding: 0 200px;
+        @include desktop {
+            padding: 0 12.5rem;
         }
     }
 
@@ -91,16 +91,16 @@
     
     &__description-title {
         color: $bandsite-darkblack;
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: 550;
-        padding: 29px 0 20px 0;
+        padding: 1.813rem 0 1.25rem 0;
 
         @include tablet {
-            font-size: 32px;
-            padding: 64px 128px 30px 128px;
+            font-size: 2rem;
+            padding: 4rem 8rem 1.875rem 8rem;
         }
-        @include tablet {
-            padding: 64px 128px 30px 200px;
+        @include desktop {
+            padding: 4rem 8rem 1.875rem 12.5rem;
         }
 
     }
@@ -110,24 +110,24 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            padding: 0 116px;
+            padding: 0 7.25rem;
         }
         @include desktop {
-            padding: 0 190px;
+            padding: 0 11.875rem;
         }
     }
     
     &__description-paragraph {
         color: $bandsite-black;
-        font-size: 17.75px;
-        line-height: 24px;
+        font-size: 1.109rem;
+        line-height: 1.5rem;
         font-weight: 400;
-        padding: 0 0 20px 0;
+        padding: 0 0 1.25rem 0;
 
         @include tablet {
-            font-size: 18.5px;
-            line-height: 29px;
-            padding: 0 14px 40px 14px;
+            font-size: 1.156rem;
+            line-height: 1.813rem;
+            padding: 0 0.875rem 2.5rem 0.875rem;
         }
     }
 }
@@ -136,24 +136,24 @@
     background-color: $alabaster;
     display: flex;
     flex-flow: column wrap;
-    padding: 0 20px;
+    padding: 0 1.25rem;
 
     @include tablet {
-        padding: 0 49px 21px 49px;
+        padding: 0 3.063rem 1.313rem 3.063rem;
     }
     @include tablet {
-        padding: 0 124px 21px 125px;
+        padding: 0 7.75rem 1.313rem 7.813rem;
     }
 
     &__title {
-        font-size: 33px;
+        font-size: 2.063rem;
         font-weight: 600;
         color: $bandsite-black;
-        padding: 30px 0 12px 0;
+        padding: 1.875rem 0 0.75rem 0;
 
         @include tablet {
-            font-size: 48px;
-            padding: 66px 0 24px 0;
+            font-size: 3rem;
+            padding: 4.125rem 0 1.5rem 0;
         }
     }
 
@@ -169,7 +169,7 @@
     &__image {
         width: 100%;
         height: auto;
-        padding: 0 0 20px 0;
+        padding: 0 0 1.25rem 0;
         filter: grayscale(100);
         transition: filter 0.3s ease-in-out;
         
