@@ -8,12 +8,21 @@
 
 .about {
     padding: 0 20px;
+    
+    @include tablet {
+        padding: 0;
+    }
 
     &__title {
         font-size: 33px;
         font-weight: 600;
         color: $bandsite-black;
         padding: 28px 0 12px 0;
+
+        @include tablet {
+            font-size: 48px;
+            padding: 66px 49px 24px 49px;
+        }
     }
 
     &__photo-container {
@@ -29,6 +38,10 @@
         position: absolute;
         bottom: 0;
         padding: 0;
+
+        @include tablet {
+            padding: 0 128px;
+        }
     }
 
     &__quote {
@@ -37,6 +50,12 @@
         font-weight: 600;
         line-height: 30px;
         padding: 18px 0 4px 0;
+
+        @include tablet {
+            font-size: 30px;
+            line-height: 42px;
+            padding: 40px 128px 10px 128px;
+        }
     }
 
     &__author {
@@ -44,27 +63,53 @@
         font-weight: 600;
         font-size: 19px;
         line-height: 30px;
+
+        @include tablet {
+            font-size: 21.5px;
+            line-height: 42px;
+            padding: 0 128px;
+        }
     }
 
     &__description {
         display: flex;
         flex-direction: column;
     }
-
+    
     &__description-title {
         color: $bandsite-darkblack;
         font-size: 20px;
         font-weight: 550;
-        padding-top: 29px;
-        padding-bottom: 20px;
+        padding: 29px 0 20px 0;
+
+        @include tablet {
+            font-size: 32px;
+            padding: 64px 128px 30px 128px;
+        }
+
     }
 
+    &__description-paragraphs {
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 116px;
+        }
+    }
+    
     &__description-paragraph {
         color: $bandsite-black;
         font-size: 17.75px;
         line-height: 24px;
         font-weight: 400;
         padding: 0 0 20px 0;
+
+        @include tablet {
+            font-size: 18.5px;
+            line-height: 29px;
+            padding: 0 14px 40px 14px;
+        }
     }
 }
 
@@ -74,11 +119,29 @@
     flex-flow: column wrap;
     padding: 0 20px;
 
+    @include tablet {
+        padding: 0 49px 21px 49px;
+    }
+
     &__title {
         font-size: 33px;
         font-weight: 600;
         color: $bandsite-black;
         padding: 30px 0 12px 0;
+
+        @include tablet {
+            font-size: 48px;
+            padding: 66px 0 24px 0;
+        }
+    }
+
+    &__images {
+        @include tablet {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
     }
 
     &__image {
@@ -88,6 +151,11 @@
         filter: grayscale(100);
         transition: filter 0.3s ease-in-out;
         
+        @include tablet {
+            width: 31.1%;
+            margin: 0.56vw 0;
+        }
+
         &:hover {
             filter: grayscale(0);
         }
