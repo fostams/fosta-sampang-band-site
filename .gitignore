@@ -1,3 +1,3 @@
 # Ignore bio.css and bio.css.map files
-bio.css
-bio.css.map
+*.css
+*.css.map
