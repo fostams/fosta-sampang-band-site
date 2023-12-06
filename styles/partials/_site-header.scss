@@ -1,6 +1,6 @@
 @use 'variables';
 @use './fonts';
-@import 'mixins'; // @use causes undefined mixin
+@import 'mixins';
 
 .nav {
     background-color: $bandsite-black;
@@ -38,7 +38,7 @@
         padding: 1.25rem 1.25rem 0 1.25rem;
 
         @include tablet {
-            padding: 1.813rem 3.063rem;
+            padding: 1.5rem 2rem 1.25rem 2.25rem ;
         }
         @include desktop {
             padding: 2.375rem 3.125rem 2.375rem 7.5rem;
@@ -81,7 +81,7 @@
         text-align: center;
 
             @include tablet {
-                margin: 0 2.313rem;
+                margin: 0 2rem;
             }
             @include desktop {
                 margin: 0 1.563;
@@ -92,7 +92,7 @@
             padding: 0.625rem;
 
             @include tablet {
-                padding: 2.125rem 0;
+                padding: 1.5rem 0;
             }
 
             @include desktop {
@@ -105,7 +105,7 @@
         border-bottom: 0.238rem solid $white;
             
             @include tablet {
-                border-bottom: 0.25rem solid $white;
+                border-bottom: 0.225rem solid $white;
             }
         }
 
@@ -113,7 +113,7 @@
             border-bottom: 0.238rem solid $white;
 
             @include tablet {
-                border-bottom: 0.25rem solid $white;
+                border-bottom: 0.225rem solid $white;
             }
         }
     }
@@ -132,16 +132,19 @@
     flex-direction: column;
     align-items: left;
     justify-content: center;
-
+        @include tablet {
+            background-position: 0% 100%;
+        }
+        
     &__title {
-        font-size: 1.5rem;
+        font-size: 1.875rem;
         font-weight: 550;
         padding: 0 1rem;
         color: $white;
 
         @include tablet {
-            font-size: 5.563rem;
-            padding: 0 3.063rem;
+            font-size: 3.875rem;
+            padding: 0 2.25rem;
         }
         @include desktop {
             padding: 0 7.813rem;
