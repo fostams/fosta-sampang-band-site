@@ -53,19 +53,19 @@
         }
 
         &__icon {
-            width: 22px;
-            height: 22px;
-            margin: 0 20px 0 0;
+            width: 1.375rem;
+            height: 1.375rem;
+            margin: 0 1.25rem 0 0;
 
             @include tablet {
-                width: 24px;
-                height: 24px;
-                margin: 0 22px 0 0;
+                width: 1.5rem;
+                height: 1.5rem;
+                margin: 0 1.375rem 0 0;
             }
             @include desktop {
                 width: 1.375rem;
                 height: 1.375rem;
-                margin: 0 26px 0 0;
+                margin: 0 1.625rem 0 0;
             }
         }
     }
@@ -116,7 +116,7 @@
 
             @include tablet {
                 font-size: 0.875rem;
-                padding: 20px 0 0 0;
+                padding: 1.25rem 0 0 0;
             }
             @include desktop {
                 font-size: 0.875rem;
@@ -133,10 +133,10 @@
         }
 
         &__email-container {
-            padding: 1rem 0 4px 0;
+            padding: 1rem 0 0.25rem 0;
 
             @include tablet {
-                padding: 20px 0 0 0;
+                padding: 1.25rem 0 0 0;
             }
         }
 
@@ -146,7 +146,7 @@
             color: $white;
 
             @include desktop {
-                font-size: 13px;
+                font-size: 0.813rem;
             }
         }
     }
@@ -155,8 +155,8 @@
 .nav__logo--footer {
     font-size: 1.5rem;
     font-weight: 400;
-    letter-spacing: 1px;
-    padding: 60px 0 0 0;
+    letter-spacing: 0.063rem;
+    padding: 3.75rem 0 0 0;
 
     @include tablet {
         padding: 0;
