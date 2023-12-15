@@ -20,7 +20,7 @@
                     <a href="./index.html" class="nav__hyperlink">Biography</a>
                 </li>
                 <li class="nav__link">
-                    <a href="" class="nav__hyperlink nav__hyperlink--inactive">Shows</a>
+                    <a href="./pages/shows.html" class="nav__hyperlink nav__hyperlink--inactive">Shows</a>
                 </li>
             </ul>
         </nav>
@@ -60,6 +60,18 @@
                 <img class="photo__image" src="assets/images/Photo-gallery-9.jpg" alt="confetti falling on crowd">
             </div>
         </section>
+        <section class ="comments">
+            <h2 class="comments__title">Join the Conversation</h2>
+            <form class="comment__form">
+                <label for="name">NAME</label><br>
+                <input type="text" id="name" class="name-input" required><br>
+                <label for="comment">COMMENT</label><br>
+                <textarea id="comment" rows="4" required></textarea><br>
+                <button type ="button" id="add-comment-btn">COMMENT</button>
+            </form>
+            <div class="comments__container"></div>
+        </section>
+        <script src="./scripts/index-page.js"></script>
     </main>
 
     <footer class="footer">
