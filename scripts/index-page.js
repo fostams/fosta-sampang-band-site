@@ -20,7 +20,7 @@ let comments = [
     }
 ];
 
-// Re-Render to Page All Comments from Comment Array
+// Re-Render Comments on Page Load
 window.addEventListener("DOMContentLoaded", updateComments);
 
 // Display Default Comment Array
@@ -29,6 +29,7 @@ function commentArray(commentsObj) {
         // Create <div class="comment__default">
         const commentDefault = document.createElement("div");
         commentDefault.setAttribute("class", "comment__default");
+        commentDefault.style.display = "flex";
 
         // Create comment__default child <img class="comment__default-avatar" src="../assets/images/Mohan-muruge.jpg">
         const avatar = document.createElement("img");
@@ -44,6 +45,9 @@ function commentArray(commentsObj) {
         // Create comment__text child <div class="comment__heading">
         const commentHeading = document.createElement("div");
         commentHeading.setAttribute("class", "comment__heading");
+        commentHeading.style.display = "flex";
+        commentHeading.style.flexFlow = "row wrap";
+        commentHeading.style.justifyContent = "space-between";
         commentText.appendChild(commentHeading);
 
         // Create comment__heading child <p class="comment__name">
@@ -74,9 +78,48 @@ function commentArray(commentsObj) {
 const commentForm = document.getElementById("commentForm");
 commentForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    inputNewComment(e);
-    updateComments();
+
+    // Dive Deeper: Reset Previous Error States
+    resetErrorStates();
+
+    // Validate Form Fields
+    if (validateForm()) {
+        // If successful validation, submit form
+        inputNewComment(e);
+        updateComments();
+    }
 })
+
+function validateForm() {
+    let isValid = true;
+    
+    // Validate Name
+    const nameInput = document.getElementById("name");
+    if (!nameInput.value.trim()) {
+        isValid = false;
+        setErrorState(nameInput);
+    }
+
+    // Validate Comment
+    const commentInput = document.getElementById("comment");
+    if (!commentInput.value.trim()) {
+        isValid = false;
+        setErrorState(commentInput);
+    }
+
+    return isValid;
+}
+
+function setErrorState(inputElement) {
+    inputElement.style.border = "1px solid red";
+}
+
+function resetErrorStates() {
+    const errorElements = document.querySelectorAll(".error");
+    errorElements.forEach(element => {
+        element.style.border = "1px solid grey";
+    })
+}
 
 // Construct New Comment Object
 function inputNewComment(e) {
