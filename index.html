@@ -30,6 +30,7 @@
     </header>
 
     <main class="main">
+        <!-- About Section -->
         <section class="about">
             <h2 class="about__title">About the Musicians</h2>
             <div class="about__photo-container">
@@ -46,6 +47,8 @@
                 </div>
             </article>
         </section>
+
+        <!-- Photo Section -->
         <section class ="photo">
             <h2 class="photo__title">Photo Gallery</h2>
             <div class="photo__images">
@@ -60,18 +63,46 @@
                 <img class="photo__image" src="assets/images/Photo-gallery-9.jpg" alt="confetti falling on crowd">
             </div>
         </section>
-        <section class ="comments">
+
+        <!-- Comments Section -->
+        <section class ="comments" id="comments">
+            <!-- <div class="comments__container"> --> <!-- not sure if i need this still -->
             <h2 class="comments__title">Join the Conversation</h2>
-            <form class="comment__form">
-                <label for="name">NAME</label><br>
-                <input type="text" id="name" class="name-input" required><br>
-                <label for="comment">COMMENT</label><br>
-                <textarea id="comment" rows="4" required></textarea><br>
-                <button type ="button" id="add-comment-btn">COMMENT</button>
-            </form>
-            <div class="comments__container"></div>
+            
+            <div class="comment__new">
+                <img class="comment__new-avatar" src="./assets/images/Mohan-muruge.jpg" alt="new post user's avatar">
+                <form class="comment__form" id="commentForm" method="post">
+                    <div class="comment__input-container">
+                        <label class="comment__subtitle" for="name">NAME</label><br>
+                        <input class ="comment__name-input" type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="comment__input-container">
+                        <label class="comment__subtitle" for="comment">COMMENT</label><br>
+                        <textarea class="comment__text-input" id="comment" name="comment" placeholder="Add a new comment" rows="4" required></textarea>
+                    </div>
+
+                    <button class="comment__button" type="submit" id="commentBtn">COMMENT</button>
+                </form>
+            </div>
+
+            <div class="comments__default">
+            <!-- How the Comments Array in index-page.js should look -->
+            <!-- 
+                <div class="comment__default">
+                    <img class="comment__default-avatar" src="../assets/images/Mohan-muruge.jpg">
+                    <div class="comment__text">
+                        <div class="comment__heading">
+                            <p class="comment__name">Connor Walton</p>
+                            <p class="comment__time-stamp">02/17/2021</p>
+                        </div> 
+                        <p class="comment__body">
+                        This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what is is and what it contains
+                        </p>
+                    </div>  
+                </div>
+            -->
+            </div>
         </section>
-        <script src="./scripts/index-page.js"></script>
     </main>
 
     <footer class="footer">
@@ -114,6 +145,6 @@
             <h3 class="copyright">Copyright The Bees Knees © 2021 All Rights Reserved</h3>
         </section>
     </footer>
+    <script src="./scripts/index-page.js"></script>
 </body>
-
 </html>

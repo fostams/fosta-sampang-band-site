@@ -240,3 +240,28 @@
         }
     }
 }
+
+// Comments
+
+.comment__new-avatar {
+    border-radius: 50%;
+    width: 3.125rem;
+    height: 3.125rem;
+    object-fit: cover;
+    object-position: 15% 50%;
+  }
+
+.comment__name-input {
+    border: 1px solid $mercury; /* Mercury color */
+    border-radius: 4px;
+}
+
+/* Active state */
+.comment__name-input.active {
+    border: 1px solid $bandsite-darkblack; /* Black color */
+}
+
+/* Error state */
+.comment__name-input.error {
+    border: 1px solid #ff0000; /* Red color */
+}
