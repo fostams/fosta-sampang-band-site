@@ -23,6 +23,47 @@ const commentsArray = [
 // Update Comments on page load after DOM contents loaded
 window.addEventListener("DOMContentLoaded", updateComments);
 
+/*
+// Event Listener on Comment Button
+const commentForm = document.getElementById("commentForm");
+commentForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    createNewComment(e);
+    updateComments();
+});
+
+// Creates new comment in commentsArray
+function createNewComment(e) {
+    const newComment = {
+        avatarImage: "./assets/images/avatar-placeholder.png",
+        commentName: e.target.name.value,
+        timeStamp: new Date().toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit"
+        }),
+        commentBody: e.target.comment.value
+    };
+
+    // Add the new comment to the beginning of the commentsArray
+    commentsArray.unshift(newComment);
+}
+
+// called after creating new comment
+function updateComments() {
+    const commentsDefault = document.querySelector(".comments__default");
+
+    // clear inputs
+    document.querySelector('#name').value = "";
+    document.querySelector('#comment').value = "";
+
+    // clear commentsDefault
+    commentsDefault.innerHTML = "";
+
+    createCommentElemArray(commentsArray).forEach(comment => commentsDefault.appendChild(comment));
+}
+*/
+
 // Display Default Comment Array
 function createCommentElemArray(commentsObj) {
     const commentsArr = commentsObj.map((commentElem) => {

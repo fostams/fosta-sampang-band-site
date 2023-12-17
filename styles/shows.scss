@@ -8,36 +8,90 @@
 .hero {
     background-image: url("../assets/images/hero-shows.jpg");
     width: 100%;
-    height: 58.7vw;
-    background-position: center;
+    height: 95vw;
+    background-position: 0% 0%;
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: darken;
     background-color: rgba($bandsite-black, 0.5);
     display: flex;
     flex-direction: column;
-    align-items: left;
     justify-content: center;
         @include tablet {
-            background-position: 0% 100%;
+            height: 65vw;
+            background-position: 0% 50%;
         }
         @include desktop {
             height: 49.25vw;
-            background-position: 0% 24%;
+            background-position: 0% 31.5%;
+            flex-direction: row;
+            align-items: center;
         }
-        
-    &__title {
-        font-size: 1.875rem;
-        font-weight: 550;
-        padding: 0 1rem;
+    
+    &__titles {
         color: $white;
+        padding: 0 5rem 0 1rem;
+        width: 75%;
+        @include tablet {
+            padding: 0 0 1.5rem 2.25rem;   
+        }
+        @include desktop {
+            padding: 0 0 0 7.875rem;
+            width: 60%;
+        }
+    }
+
+    &__subtitle {
+        font-size: 0.875rem;
+        font-weight: 300;
+        padding: 1rem 0;
 
         @include tablet {
+            font-size: 1.563rem;
+            padding: 0 0 1.5rem 0;
+        }
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 550;
+        
+        @include tablet {
             font-size: 3.875rem;
+        }
+    }
+
+    &__song {
+        padding: 0.75rem;
+        width: 100%;
+        height: 45%;
+        border: none;
+
+        @include tablet {
+            width: 64%;
+            height: 20%;
             padding: 0 2.25rem;
         }
         @include desktop {
             padding: 0 7.875rem;
+        }
+    }
+}
+
+.show {
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $bandsite-black;
+        padding: 1.5rem 0 0.5rem 0;
+
+        @include tablet {
+            font-size: 2.25rem;
+            padding: 3.375rem 2.25rem 1.5rem 2.25rem;
+        }
+        @include desktop {
+            padding: 3.25rem 3.063rem 2.125rem 7.875rem;
         }
     }
 }
