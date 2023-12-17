@@ -74,33 +74,68 @@ function commentArray(commentsObj) {
 const commentForm = document.getElementById("commentForm");
 commentForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    createNewComment(e);
+    inputNewComment(e);
     updateComments();
 })
 
 // Construct New Comment Object
-function createNewComment(e) {
+function inputNewComment(e) {
     const newComment = {
         avatar: "./assets/images/avatar-placeholder.png",
         name: e.target.name.value,
-        timestamp: new Date().toLocaleDateString("en-US", { year: "numeric", month: "2-digit", day: "2-digit" }),
+        timestamp: new Date().toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit"
+        }),
         commentBody: e.target.comment.value
     };
 
-    // Add the new comment to the beginning of the comments
+    // Add New Comment to the Top of Comment Array
     comments.unshift(newComment);
 }
 
-// called after creating new comment
+
+// Call After Creating New Comment
 function updateComments() {
     const commentsDefault = document.querySelector(".comments__default");
 
-    // Clears Input Fields After Submitting New Comment
+    // Clear Input Fields After Submitting New Comment
     document.querySelector('#name').value = "";
     document.querySelector('#comment').value = "";
 
-    // Clears All Comments From Comment Array (commentsDefault)
+    // Clear All Comments From Comment Array (commentsDefault)
     commentsDefault.innerHTML = "";
-
+    
+    // Create and Append Each New Comment
     commentArray(comments).forEach(comment => commentsDefault.appendChild(comment));
 }
+
+
+/* This Dive Deeper challenge is bugged and I would love to know how to fix it in a later time!
+// Calculate Time Difference and Return Human-Readable Format
+function calculateTimeDifference(postTime) {
+    const currentTime = new Date();
+    const timeDifference = currentTime - postTime;
+
+    const seconds = Math.floor( timeDifference / 1000 );
+    const minutes = Math.floor( seconds / 60 );
+    const hours = Math.floor( minutes / 60 );
+    const days = Math.floor( hours / 24 );
+
+    if (seconds < 60) {
+        return seconds + " seconds ago";
+    } else if (minutes < 60) {
+        return minutes + " minutes ago";
+    } else if (hours < 24) {
+        return hours + " hours ago";
+    } else if (days <= 1) {
+        return days + " day ago";
+    }
+    } else if (days <= 3) {
+        return days + " days ago";
+    } else {
+        const options = {year: "numeric", month: "2-digit", day: "2-digit"};
+        return postTime.toLocaleDateString("en-US", options);
+    }
+} */
