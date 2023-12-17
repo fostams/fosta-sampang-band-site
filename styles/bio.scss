@@ -241,29 +241,69 @@
     }
 }
 
-// Comments
+// Comments Section
 
-.comment__new-avatar {
-    border-radius: 50%;
-    width: 3.125rem;
-    height: 3.125rem;
-    object-fit: cover;
-    object-position: 15% 50%;
-    // margin-right: 1rem;
-    // margin-top: 0.25rem;
-  }
+.comments {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 0 1rem;
 
-.comment__name-input {
-    border: 1px solid $mercury; /* Mercury color */
-    border-radius: 4px;
+    @include tablet {
+        padding: 0 2.25rem 1.313rem 2.25rem;
+    }
+    @include desktop {
+        padding: 0 7.875rem 1.313rem 7.875rem;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $bandsite-black;
+        padding: 1.5rem 0 0.5rem 0;
+
+        @include tablet {
+            font-size: 2.25rem;
+            padding: 3.25rem 0 2.125rem 0;
+        }
+    }
 }
 
-/* Active state */
-.comment__name-input.active {
-    border: 1px solid $bandsite-darkblack; /* Black color */
-}
+.comment {
 
-/* Error state */
-.comment__name-input.error {
-    border: 1px solid #ff0000; /* Red color */
+    &__new-avatar {
+        border-radius: 50%;
+        width: 3.125rem;
+        height: 3.125rem;
+        object-fit: cover;
+        object-position: 15% 50%;
+    }
+
+    &__name, &__text {
+        border: 0.063rem solid $mercury;
+        border-radius: 0.25rem;
+    }
+// these are not working!! check tomorrow
+    &__name:focus, &__text:focus {
+        border: 0.063rem solid $bandsite-darkblack;
+    }
+
+    &__name.error, &__text.error {
+        border: 0.063rem solid red;
+    }
+    
+    &__button {
+        background-color: $bandsite-black;
+        color: $white;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        margin-bottom: 1rem;
+        text-align: center;
+
+        &__:hover {
+            background-color: $bandsite-darkblack;
+        }
+    }
+
 }
