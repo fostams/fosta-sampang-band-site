@@ -341,7 +341,7 @@
         width: 100%;
         margin: 0 0 1.125rem 0;
 
-        &:active {
+        &:hover {
             background-color: $bandsite-darkblack;
         }
 
@@ -387,10 +387,6 @@
         flex-flow: row wrap;
         justify-content: space-between;
         padding: 0 0 0.75rem 0;
-
-        @include tablet {
-            margin: 0 1rem 0 0;
-        }
     }
 
     &__name {

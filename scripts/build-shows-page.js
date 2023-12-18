@@ -1,4 +1,4 @@
-let showsArray = [
+let showArray = [
     {
         date:"Mon Sept 06 2021",
         venue: "Ronald Lane",
@@ -31,122 +31,96 @@ let showsArray = [
     },
 ]
 
-window.addEventListener(("DOMContentLoaded"), createShowElemArray());
+window.addEventListener(("DOMContentLoaded"), createShowArray);
+
 
 let showsContainer = document.querySelector(".shows__container");
+let selectedShow = null;
 
-/* function createShowElemArray() {
-    showsArray.map((showObj) => {
-
+function createShowArray() {
+    showArray.map((showElem) => {
+        // Create <div class="show">
         let show = document.createElement("div");
         show.setAttribute("class", "show");
-        
-        // 1st show details div
-        let showDetailsDate = document.createElement("div");
-        showDetailsDate.setAttribute("class", "show__details");
-        
-        show.appendChild(showDetailsDate);
-        
-        // Date header p
-        let detailsHeadingDate = document.createElement("p");
-        detailsHeadingDate.setAttribute("class", "details__heading");
-        detailsHeadingDate.innerText = "DATE";
-        
-        showDetailsDate.appendChild(detailsHeadingDate);
-        
-        // Date p
-        let dateDetails = document.createElement("p");
-        dateDetails.setAttribute("class", "date__details");
-        dateDetails.innerText = showObj.date;
-        
-        showDetailsDate.appendChild(dateDetails);
-        
-        // 2nd show details div
-        let showDetailsVenue = document.createElement("div");
-        showDetailsVenue.setAttribute("class", "show__details");
-        
-        show.appendChild(showDetailsVenue);
-        
-        // Venue header p
-        let detailsHeadingVenue = document.createElement("p");
-        detailsHeadingVenue.setAttribute("class", "details__heading");
-        detailsHeadingVenue.innerText = "VENUE"
-        
-        showDetailsVenue.appendChild(detailsHeadingVenue);
-        
-        // Venue p
-        let dateDetailsVenue = document.createElement("p");
-        dateDetailsVenue.setAttribute("class", "venue__details");
-        dateDetailsVenue.innerText = showObj.venue;
-        
-        showDetailsVenue.appendChild(dateDetailsVenue);
-        
-        // 3rd show details div
-        let showDetailsLocation = document.createElement("div");
-        showDetailsLocation.setAttribute("class", "show__details");
-        
-        show.appendChild(showDetailsLocation);
-        
-        // Location header p
-        let detailsHeadingLocation = document.createElement("p");
-        detailsHeadingLocation.setAttribute("class", "details__heading");
-        detailsHeadingLocation.innerText = "LOCATION";
-        
-        showDetailsLocation.appendChild(detailsHeadingLocation);
-        
-        // Venue p
-        let dateDetailsLocation = document.createElement("p");
-        dateDetailsLocation.setAttribute("class", "location__details");
-        dateDetailsLocation.innerText = showObj.location;
-        
-        showDetailsLocation.appendChild(dateDetailsLocation);
-        
-        // cta div
-        let showCta = document.createElement("div");
-        showCta.setAttribute("class", "show__cta");
-        
-        // show.appendChild(showCta);
-        
-        // cta button
-        let btnBuyTickets = document.createElement("a");
-        btnBuyTickets.setAttribute("class", "btn--buy-tickets");
 
-        // Text
-        btnBuyTickets.innerText = "BUY TICKETS";
+        // 1a. Create show child <div class="show__container"> for DATE
+        let containerDate = document.createElement("div");
+        containerDate.setAttribute("class", "show__container");
+        show.appendChild(containerDate);
+
+        // 1b. Create show__container child <p class="show__title"> for DATE
+        let titleDate = document.createElement("p");
+        titleDate.setAttribute("class", "show__title");
+        titleDate.innerText = "DATE";
+        containerDate.appendChild(titleDate);
+
+        // 1c. Create show__container child <p class="show__info"> for DATE
+        let infoDate = document.createElement("p");
+        infoDate.setAttribute("class", "show__info-date");
+        infoDate.innerText = showElem.date;
+        containerDate.appendChild(infoDate);
+
+        // 2a. Create show child <div class="show__container"> for VENUE
+        let containerVenue = document.createElement("div");
+        containerVenue.setAttribute("class", "show__container");
+        show.appendChild(containerVenue);
+
+        // 2b. Create show__container child <p class="show__title"> for VENUE
+        let titleVenue = document.createElement("p");
+        titleVenue.setAttribute("class", "show__title");
+        titleVenue.innerText = "VENUE";
+        containerVenue.appendChild(titleVenue);
+
+        // 2c. Create show__container child <p class="show__info"> for VENUE
+        let infoVenue = document.createElement("p");
+        infoVenue.setAttribute("class", "show__info");
+        infoVenue.innerText = showElem.venue;
+        containerVenue.appendChild(infoVenue);
+
+        // 3a. Create show child <div class="show__container"> for LOCATION
+        let containerLocation = document.createElement("div");
+        containerLocation.setAttribute("class", "show__container");
+        show.appendChild(containerLocation);
+
+        // 3b. Create show__container child <p class="show__title"> for LOCATION
+        let titleLocation = document.createElement ("p");
+        titleLocation.setAttribute("class", "show__title");
+        titleLocation.innerText = "LOCATION";
+        containerLocation.appendChild(titleLocation);
+
+        // 3c. Create show__container child <p class="show__info"> for LOCATION
+        let infoLocation = document.createElement("p");
+        infoLocation.setAttribute("class", "show__info");
+        infoLocation.innerText = showElem.location;
+        containerLocation.appendChild(infoLocation);
         
-        showCta.appendChild(btnBuyTickets);
-        
-        show.appendChild(showCta);    
-        
-        document.querySelector('.shows-container').appendChild(show);
+        // Create Ticket Button
+
+        let ticketsBtn = document.createElement("button");
+        ticketsBtn.setAttribute("class", "show__button");
+        ticketsBtn.setAttribute("type", "submit");
+        ticketsBtn.setAttribute("id", "ticketsBtn");
+        ticketsBtn.innerText = "BUY TICKETS";
+        show.appendChild(ticketsBtn);
+
+        ticketsBtn.addEventListener("click", function () {
+            if (selectedShow) {
+                selectedShow.style.backgroundColor = "";
+            }
+            show.style.backgroundColor = "#E1E1E1";
+            selectedShow = show;
+        });
+
+        document.addEventListener("click", function (event) {
+            if (!event.target.closest(".show")) {
+                if (selectedShow) {
+                    selectedShow.style.backgroundColor = "";
+                    selectedShow = null;
+                }
+            }
+        });
+
+        document.querySelector('.shows__container').appendChild(show);
         }
     );
 }
-
-  
-showsContainer.addEventListener("click", (e) => {
-    let showsHTMLCollection = showsContainer.querySelectorAll(".show");
-    let clickedChild = e.target.closest(".shows-container > * ");
-    
-    if (clickedChild !== showsContainer.firstElementChild && clickedChild.classList.contains("selected")) {
-        clickedChild.classList.toggle("selected");
-
-    } else if(clickedChild === showsContainer.firstElementChild) {
-        console.log("first child clicked");
-        showsHTMLCollection.forEach((show) => show.classList.remove("selected"));
-    } else if (clickedChild !== showsContainer.firstElementChild){
-        showsHTMLCollection.forEach((show) => show.classList.remove("selected"));
-        clickedChild.classList.add("selected");
-    }
-})
-  
-
-document.addEventListener("click", (e) => {
-    if(!showsContainer.contains(e.target)) {
-        let shows = showsContainer.children;
-
-        for(let show of shows) {
-            show.classList.remove("selected");
-        }
-    }
-}) */
