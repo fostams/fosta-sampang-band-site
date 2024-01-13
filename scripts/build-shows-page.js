@@ -1,4 +1,4 @@
-let showArray = [
+const showArray = [
     {
         date:"Mon Sept 06 2021",
         venue: "Ronald Lane",
@@ -34,76 +34,76 @@ let showArray = [
 window.addEventListener(("DOMContentLoaded"), createShowArray);
 
 
-let showsContainer = document.querySelector(".shows__container");
+const showsContainer = document.querySelector(".shows__container");
 let selectedShow = null;
 
 function createShowArray() {
-    showArray.map((showElem) => {
+    showArray.forEach((showElem) => {
         // Create <div class="show">
-        let show = document.createElement("div");
+        const show = document.createElement("div");
         show.setAttribute("class", "show");
 
         // 1a. Create show child <div class="show__container"> for DATE
-        let containerDate = document.createElement("div");
+        const containerDate = document.createElement("div");
         containerDate.setAttribute("class", "show__container");
         show.appendChild(containerDate);
 
         // 1b. Create show__container child <p class="show__title"> for DATE
-        let titleDate = document.createElement("p");
+        const titleDate = document.createElement("p");
         titleDate.setAttribute("class", "show__title");
         titleDate.innerText = "DATE";
         containerDate.appendChild(titleDate);
 
         // 1c. Create show__container child <p class="show__info"> for DATE
-        let infoDate = document.createElement("p");
+        const infoDate = document.createElement("p");
         infoDate.setAttribute("class", "show__info-date");
         infoDate.innerText = showElem.date;
         containerDate.appendChild(infoDate);
 
         // 2a. Create show child <div class="show__container"> for VENUE
-        let containerVenue = document.createElement("div");
+        const containerVenue = document.createElement("div");
         containerVenue.setAttribute("class", "show__container");
         show.appendChild(containerVenue);
 
         // 2b. Create show__container child <p class="show__title"> for VENUE
-        let titleVenue = document.createElement("p");
+        const titleVenue = document.createElement("p");
         titleVenue.setAttribute("class", "show__title");
         titleVenue.innerText = "VENUE";
         containerVenue.appendChild(titleVenue);
 
         // 2c. Create show__container child <p class="show__info"> for VENUE
-        let infoVenue = document.createElement("p");
+        const infoVenue = document.createElement("p");
         infoVenue.setAttribute("class", "show__info");
         infoVenue.innerText = showElem.venue;
         containerVenue.appendChild(infoVenue);
 
         // 3a. Create show child <div class="show__container"> for LOCATION
-        let containerLocation = document.createElement("div");
+        const containerLocation = document.createElement("div");
         containerLocation.setAttribute("class", "show__container");
         show.appendChild(containerLocation);
 
         // 3b. Create show__container child <p class="show__title"> for LOCATION
-        let titleLocation = document.createElement ("p");
+        const titleLocation = document.createElement ("p");
         titleLocation.setAttribute("class", "show__title");
         titleLocation.innerText = "LOCATION";
         containerLocation.appendChild(titleLocation);
 
         // 3c. Create show__container child <p class="show__info"> for LOCATION
-        let infoLocation = document.createElement("p");
+        const infoLocation = document.createElement("p");
         infoLocation.setAttribute("class", "show__info");
         infoLocation.innerText = showElem.location;
         containerLocation.appendChild(infoLocation);
         
         // Create Ticket Button
 
-        let ticketsBtn = document.createElement("button");
+        const ticketsBtn = document.createElement("button");
         ticketsBtn.setAttribute("class", "show__button");
         ticketsBtn.setAttribute("type", "submit");
         ticketsBtn.setAttribute("id", "ticketsBtn");
         ticketsBtn.innerText = "BUY TICKETS";
         show.appendChild(ticketsBtn);
 
-        ticketsBtn.addEventListener("click", function () {
+        show.addEventListener("click", function () {
             if (selectedShow) {
                 selectedShow.style.backgroundColor = "";
             }

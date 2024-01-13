@@ -1,5 +1,5 @@
 // Comments Array
-let comments = [
+const comments = [
     {
         avatar: "./assets/images/avatar-placeholder.png",
         name: "Connor Walton",
@@ -29,7 +29,7 @@ function commentArray(commentsObj) {
         // Create <div class="comment__default">
         const commentDefault = document.createElement("div");
         commentDefault.setAttribute("class", "comment__default");
-        commentDefault.style.display = "flex";
+        // commentDefault.style.display = "flex";
 
         // Create comment__default child <img class="comment__default-avatar" src="../assets/images/Mohan-muruge.jpg">
         const avatar = document.createElement("img");
@@ -45,9 +45,9 @@ function commentArray(commentsObj) {
         // Create comment__text child <div class="comment__heading">
         const commentHeading = document.createElement("div");
         commentHeading.setAttribute("class", "comment__heading");
-        commentHeading.style.display = "flex";
-        commentHeading.style.flexFlow = "row wrap";
-        commentHeading.style.justifyContent = "space-between";
+        // commentHeading.style.display = "flex";
+        // commentHeading.style.flexFlow = "row wrap";
+        // commentHeading.style.justifyContent = "space-between";
         commentText.appendChild(commentHeading);
 
         // Create comment__heading child <p class="comment__name">
@@ -90,36 +90,35 @@ commentForm.addEventListener("submit", (e) => {
     }
 })
 
+const nameInput = document.getElementById("name");
+const commentInput = document.getElementById("comment");
+
 function validateForm() {
     let isValid = true;
     
     // Validate Name
-    const nameInput = document.getElementById("name");
     if (!nameInput.value.trim()) {
         isValid = false;
-        setErrorState(nameInput);
+        // setErrorState(nameInput);
+        nameInput.classList.add("error");
+        console.log("name-input");
     }
 
-    // Validate Comment
-    const commentInput = document.getElementById("comment");
+    // Validate Comment 
     if (!commentInput.value.trim()) {
         isValid = false;
-        setErrorState(commentInput);
+        // setErrorState(commentInput);
+        commentInput.classList.add("error");
+        console.log("comment-input");
     }
 
     return isValid;
 }
 
-function setErrorState(inputElement) {
-    inputElement.style.border = "1px solid red";
-}
-
 function resetErrorStates() {
-    const errorElements = document.querySelectorAll(".error");
-    errorElements.forEach(element => {
-        element.style.border = "1px solid grey";
-    })
-}
+    nameInput.classList.remove("error");
+    commentInput.classList.remove("error");
+} 
 
 // Construct New Comment Object
 function inputNewComment(e) {
