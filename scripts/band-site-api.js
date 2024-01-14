@@ -30,7 +30,7 @@ export class BandSiteApi {
             const url = "https://project-1-api.herokuapp.com/showdates?api_key=54399520-e616-4117-b2b4-05f395aafd4a";
             const response = await axios.get(url);
             console.log(response.data);
-            return response;
+            return response.data;
         } catch (error) {
             console.error(error);
         }

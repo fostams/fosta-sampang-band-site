@@ -14,7 +14,7 @@ function displayComment(commentsObj) {
         // Create comment__default child <img class="comment__default-avatar" src="../assets/images/Mohan-muruge.jpg">
         const avatar = document.createElement("img");
         avatar.setAttribute("class", "comment__default-avatar");
-        avatar.setAttribute("src", "./assets/images/avatar-placeholder.png"); // set placeholder image, check relative url
+        avatar.setAttribute("src", "./assets/images/avatar-placeholder.png");
         commentDefault.appendChild(avatar);
 
         // Create comment__default child <div class="comment__text">
@@ -56,9 +56,6 @@ commentForm.addEventListener("submit", async (e) => {
     // Dive Deeper: Reset Previous Error States
     resetErrorStates();
 
-    document.querySelector('#name').value = "";
-    document.querySelector('#comment').value = "";
-
     const newComment = {
         name: e.target.name.value,
         comment: e.target.comment.value
@@ -69,6 +66,9 @@ commentForm.addEventListener("submit", async (e) => {
         // If successful validation, submit form
         await bandSiteApi.postComment(newComment);
         updateComments();
+
+        document.querySelector('#name').value = "";
+        document.querySelector('#comment').value = "";
     }
 })
 
@@ -111,12 +111,10 @@ async function updateComments() {
     commentsDefault.innerHTML = "";
     
     // Create and Append Each New Comment
-    // displayComment(comments).forEach(comment => commentsDefault.appendChild(comment));
     comments.data.forEach((comment) => {
         const newComment = displayComment(comment);
-        
-        commentsDefault.appendChild(newComment);
-        });
+        commentsDefault.prepend(newComment);
+    });
 }
 
 updateComments();
