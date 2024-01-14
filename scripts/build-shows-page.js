@@ -1,4 +1,4 @@
-const showArray = [
+/* const showArray = [
     {
         date:"Mon Sept 06 2021",
         venue: "Ronald Lane",
@@ -29,10 +29,14 @@ const showArray = [
         venue: "Press Club",
         location: "San Francisco, CA"
     },
-]
+] */
+import {BandSiteApi} from "./band-site-api.js";
+
+const bandSiteApi = new BandSiteApi("54399520-e616-4117-b2b4-05f395aafd4a");
+const comments = bandSiteApi.getShows();
+console.log(comments)
 
 window.addEventListener(("DOMContentLoaded"), createShowArray);
-
 
 const showsContainer = document.querySelector(".shows__container");
 let selectedShow = null;
