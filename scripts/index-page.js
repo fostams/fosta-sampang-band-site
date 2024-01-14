@@ -1,11 +1,9 @@
 import {BandSiteApi} from "./band-site-api.js";
 
 const bandSiteApi = new BandSiteApi("54399520-e616-4117-b2b4-05f395aafd4a");
-const comments = bandSiteApi.getComments();
-console.log(comments)
 
 // Re-Render Comments on Page Load
-window.addEventListener("DOMContentLoaded", updateComments);
+// window.addEventListener("DOMContentLoaded", updateComments);
 
 // Display Default Comment Array
 function displayComment(commentsObj) {
@@ -38,13 +36,13 @@ function displayComment(commentsObj) {
         // Create comment__heading child <p class="comment__timestamp">
         const timestamp = document.createElement("p");
         timestamp.setAttribute("class", "comment__timestamp");
-        timestamp.innerText = commentsObj.timestamp;
+        timestamp.innerText = new Date(commentsObj.timestamp).toLocaleDateString("en-US");
         commentHeading.appendChild(timestamp);
 
         // Create comment__text child <p class="comment__body">
         const commentBody = document.createElement("p");
         commentBody.setAttribute("class", "comment__body");
-        commentBody.innerText = commentsObj.commentBody;
+        commentBody.innerText = commentsObj.comment;
         commentText.appendChild(commentBody);
 
         return commentDefault;
@@ -114,33 +112,11 @@ async function updateComments() {
     
     // Create and Append Each New Comment
     // displayComment(comments).forEach(comment => commentsDefault.appendChild(comment));
-    comments.data.forEach(comment => displayComment(comment));
+    comments.data.forEach((comment) => {
+        const newComment = displayComment(comment);
+        
+        commentsDefault.appendChild(newComment);
+        });
 }
 
-/* This Dive Deeper challenge is bugged and I would love to know how to fix it in a later time!
-// Calculate Time Difference and Return Human-Readable Format
-function calculateTimeDifference(postTime) {
-    const currentTime = new Date();
-    const timeDifference = currentTime - postTime;
-
-    const seconds = Math.floor( timeDifference / 1000 );
-    const minutes = Math.floor( seconds / 60 );
-    const hours = Math.floor( minutes / 60 );
-    const days = Math.floor( hours / 24 );
-
-    if (seconds < 60) {
-        return seconds + " seconds ago";
-    } else if (minutes < 60) {
-        return minutes + " minutes ago";
-    } else if (hours < 24) {
-        return hours + " hours ago";
-    } else if (days <= 1) {
-        return days + " day ago";
-    }
-    } else if (days <= 3) {
-        return days + " days ago";
-    } else {
-        const options = {year: "numeric", month: "2-digit", day: "2-digit"};
-        return postTime.toLocaleDateString("en-US", options);
-    }
-} */
+updateComments();
