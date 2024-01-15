@@ -35,4 +35,26 @@ export class BandSiteApi {
             console.error(error);
         }
     }
+
+    async likeComment(commentId) {
+        try {
+            const url = `https://project-1-api.herokuapp.com/comments/${commentId}/like?api_key=54399520-e616-4117-b2b4-05f395aafd4a`;
+            const response = await axios.put(url);
+            console.log(response.data);
+            return response.data;
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    async deleteComment(commentId) {
+        try {
+            const url = `https://project-1-api.herokuapp.com/comments/${commentId}?api_key=54399520-e616-4117-b2b4-05f395aafd4a`;
+            const response = await axios.delete(url);
+            console.log(response.data);
+            return response.data;
+        } catch (error) {
+            console.error(error);
+        }
+    }
 }

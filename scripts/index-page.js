@@ -2,58 +2,73 @@ import {BandSiteApi} from "./band-site-api.js";
 
 const bandSiteApi = new BandSiteApi("54399520-e616-4117-b2b4-05f395aafd4a");
 
-// Re-Render Comments on Page Load
-// window.addEventListener("DOMContentLoaded", updateComments);
-
 // Display Default Comment Array
 function displayComment(commentsObj) {
-        // Create <div class="comment__default">
         const commentDefault = document.createElement("div");
         commentDefault.setAttribute("class", "comment__default");
 
-        // Create comment__default child <img class="comment__default-avatar" src="../assets/images/Mohan-muruge.jpg">
         const avatar = document.createElement("img");
         avatar.setAttribute("class", "comment__default-avatar");
         avatar.setAttribute("src", "./assets/images/avatar-placeholder.png");
         commentDefault.appendChild(avatar);
 
-        // Create comment__default child <div class="comment__text">
         const commentText = document.createElement("div");
         commentText.setAttribute("class", "comment__text");
         commentDefault.appendChild(commentText);
 
-        // Create comment__text child <div class="comment__heading">
         const commentHeading = document.createElement("div");
         commentHeading.setAttribute("class", "comment__heading");
         commentText.appendChild(commentHeading);
 
-        // Create comment__heading child <p class="comment__name">
         const name = document.createElement("p");
         name.setAttribute("class", "comment__name");
         name.innerText = commentsObj.name;
         commentHeading.appendChild(name);
 
-        // Create comment__heading child <p class="comment__timestamp">
         const timestamp = document.createElement("p");
         timestamp.setAttribute("class", "comment__timestamp");
         timestamp.innerText = new Date(commentsObj.timestamp).toLocaleDateString("en-US");
         commentHeading.appendChild(timestamp);
 
-        // Create comment__text child <p class="comment__body">
         const commentBody = document.createElement("p");
         commentBody.setAttribute("class", "comment__body");
         commentBody.innerText = commentsObj.comment;
         commentText.appendChild(commentBody);
 
+        const commentBWrapper = document.createElement("div");
+        commentBWrapper.setAttribute("class", "comment__button-wrapper");
+        commentText.appendChild(commentBWrapper);
+
+        // Create Like button
+        const likeButton = document.createElement('button');
+        likeButton.innerText = '🤍';
+        likeButton.addEventListener('click', async (e) => {
+            e.preventDefault();
+            e.stopPropagation;
+            await bandSiteApi.likeComment(comment.id);
+            updateComments();
+        })
+        commentBWrapper.appendChild(likeButton);
+
+        // Create Delete button
+        const deleteButton = document.createElement('button');
+        deleteButton.innerText = '🗑️';
+        deleteButton.addEventListener('click', async(e) => {
+            e.preventDefault();
+            e.stopPropagation;
+            commentDefault.remove();
+            await bandSiteApi.deleteComment(comment.id);
+        })
+        commentBWrapper.appendChild(deleteButton);
+
         return commentDefault;
+        
 }
 
 // Submit Using Add Event Listener
 const commentForm = document.getElementById("commentForm");
 commentForm.addEventListener("submit", async (e) => {
     e.preventDefault();
-
-    // Dive Deeper: Reset Previous Error States
     resetErrorStates();
 
     const newComment = {
@@ -81,17 +96,13 @@ function validateForm() {
     // Validate Name
     if (!nameInput.value.trim()) {
         isValid = false;
-        // setErrorState(nameInput);
         nameInput.classList.add("error");
-        console.log("name-input");
     }
 
     // Validate Comment 
     if (!commentInput.value.trim()) {
         isValid = false;
-        // setErrorState(commentInput);
         commentInput.classList.add("error");
-        console.log("comment-input");
     }
 
     return isValid;
